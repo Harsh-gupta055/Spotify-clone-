@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web player music for everyone</title>
+
+    <link rel="stylesheet" href="style2.css">
+    <!-- icon which is displayed in title bar -->
+    <link rel="icon" href="./assets/logo.png">
+    <!-- its taken from fontawesome cdn link website so that <i icons can work -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- its taken from google fonts monteserrate-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-left">
+            <div class="spot-img">
+                <img src="./assets/logo.png" style="height: 35px; width: 35px;">
+            </div>
+            <div class="circle">
+                <i class="fa-solid fa-house"></i>
+            </div>
+        </div>
+
+        <div class="nav-center">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="What do you want to play ? ">
+            <i class="fa-solid fa-folder-open"></i>
+        </div>
+
+        <div class="nav-right">
+            <a href="#" class="hide">Premium</a>
+            <a href="#" class="hide">Support</a>
+            <a href="#" class="hide">Download</a>
+            <span class="divider"></span>
+            <a href="#"><i class="fa-solid fa-download"></i>Install</a>
+            <a href="#">Sign up</a>
+            <button class="login-btn">login</button>
+        </div>
+    </div>
+    <div class="main">
+        <div class="sidebar">
+            <div class="nav">
+                <h4>Your Library</h4>
+                <button class="badge">
+                    <i class="fa-solid fa-plus"></i>
+                    create
+                </button>
+            </div>
+            <div class="lib-box">
+                <div class="box">
+                    <p class="box-p1">Create your first playlist</p>
+                    <p class="box-p2">It's easy , we will help you </p>
+                    <button class="badge-b">create playlist</button>
+                </div>
+                <div class="box">
+                    <p class="box-p1">Let's Find some podcasts to follow</p>
+                    <p class="box-p2"> We will keep you updated on new episodes </p>
+                    <button class="badge-b">Browse Podcast </button>
+                </div>
+            </div>
+        </div>
+        <div class="maincontent">
+            <h2> Recently Played </h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="./assets/pic1.webp" class="card-img">
+                    <div class="music-playbutton"><i id="1" class=" playmusic fa-solid fa-circle-play"></i></div>
+                    <p class="card-title">Ekdantaya song</p>
+                    <p class="card-info">Song that brings spirituality and motivation inside you</p>
+                </div>
+                 <div class="card">
+                    <img src="./assets/pic2.jpg" class="card-img">
+                    <div class="music-playbutton"><i id="2" class=" playmusic fa-solid fa-circle-play"></i></div>
+                    <p class="card-title">Baras Ja</p>
+                    <p class="card-info">A soft sizzling song that makes you feel of your soul</p>
+                </div>
+                 <div class="card">
+                    <img src="./assets/pic3.jpg" class="card-img">
+                    <div class="music-playbutton"><i id="3" class=" playmusic fa-solid fa-circle-play"></i></div>
+                    <p class="card-title">Dil Dooba </p>
+                    <p class="card-info">Song that enhances love and shine in your eyes </p>
+                </div>
+            </div>
+            <h2> Episodes You might Like </h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="./assets/pic4.jpg" class="card-img">
+                    <div class="music-playbutton"><i id="4" class=" playmusic fa-solid fa-circle-play"></i></div>
+                    <p class="card-title">Dola Re Dola</p>
+                    <p class="card-info">A song high in melodicness features clear memories</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/pic5.jpg" class="card-img">
+                    <div class="music-playbutton"><i id="5" class=" playmusic fa-solid fa-circle-play"></i></div>
+                    <p class="card-title">Bhula Dena Mujhe </p>
+                    <p class="card-info">Emotional song that can make you cry </p>
+                </div>
+                <div class="card">
+                    <img src="./assets/pic6.jpg" class="card-img">
+                    <div class="music-playbutton"><i id="6" class=" playmusic fa-solid fa-circle-play"></i></div>
+                    <p class="card-title">Karpur Gauram</p>
+                    <p class="card-info">A song devoted to our lord Ganesh ji</p>
+                </div>
+                <div class="card">
+                    <img src="./assets/pic7.jpg" class="card-img">
+                    <div class="music-playbutton"><i id="7" class=" playmusic fa-solid fa-circle-play"></i></div>
+                    <p class="card-title">Radha Teri chunari</p>
+                    <p class="card-info">Song that can never gets old </p>
+                </div>
+                <div class="card">
+                    <img src="./assets/pic8.jpg" class="card-img">
+                    <div class="music-playbutton"><i id="8" class=" playmusic fa-solid fa-circle-play"></i></div>
+                    <p class="card-title">Rafta Rafta </p>
+                    <p class="card-info">Song full of energy which brings Adrenaline rush</p>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br>
+            <div class="footer">
+                <div class="column">
+                    <h3>Company</h3>
+                    <a href="#">About</a>
+                    <a href="#">Jobs</a>
+                    <a href="#">For the records</a>
+                </div>
+                <div class="column">
+                    <h3>Communities</h3>
+                    <a href="#">For Artists</a>
+                    <a href="#">For Creators</a>
+                    <a href="#">For Authors</a>
+                </div>
+                <div class="column">
+                    <h3>Useful links</h3>
+                    <a href="#">support</a>
+                    <a href="#">Free Mobile App</a>
+                    <a href="#">Popular by Country</a>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br>
+
+
+        </div>
+    </div>
+
+    <!-- music player section-->
+    <div class="player-bar">
+        <div class="now-bar">
+            <img src="./assets/card6img.jpeg" alt="">
+            <div>
+            <div class="img-tt">Title 1</div>
+            <div class="img-des">This is description</div>
+            </div>
+        </div>
+        <div class="music-controller">
+            <div class="player"> 
+                <div  ><i  id="backward" class="player-btns fa-solid fa-backward"></i></div>
+                <div ><i id="play" class="player-btns fa-solid fa-play"></i></div>
+                <div ><i  id="forward"  class="player-btns fa-solid fa-forward"></i></div>      
+            </div>
+            <div>
+                <input type="range" id="progressbar" value="0">
+            </div>
+        </div>
+        <div></div>
+    </div>
+    </div>
+    </div>
+    <script src="script4.js"></script>
+</body>
+
+</html>

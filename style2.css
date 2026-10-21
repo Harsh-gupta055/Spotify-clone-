@@ -1,0 +1,465 @@
+body {
+     font-family: "Montserrat", sans-serif;
+     margin: 0;
+     background-color: black;
+     color: white;
+     overflow: hidden;/* it cannot overflow downwards */
+ }
+
+ .main {
+     display: flex;
+     height: 100vh;
+     padding: 8px;
+     overflow: auto; /* it can scroll vertically downward*/
+ }
+
+ .sidebar {
+     background-color: #121212;
+     width: 340px;
+     border-radius: 1rem;
+     /* 1rem=16px */
+     margin-right: 0.5rem;
+     overflow: auto;
+     flex-shrink: 0;
+ }
+
+ .maincontent {
+     background-color: #121212;
+     flex: 1;
+     min-width: 0;
+     overflow: auto;
+ }
+
+
+ .nav {
+     display: flex;
+     margin: 2rem;
+ }
+
+ .badge {
+     color: white;
+     background-color: #232323;
+     border-radius: 30%;
+     justify-content: center;
+     align-items: center;
+     height: 35px;
+     width: 80px;
+     border: none;
+     margin-top: 1rem;
+     margin-left: 5rem;
+ }
+
+ .badge:hover {
+     background-color: #4b4b4b;
+
+ }
+
+ .box {
+     background-color: #232323;
+     height: 8rem;
+     border-radius: 0.75rem;
+     margin: 0.75rem 0 1.75rem 0;
+     /*top , right, down ,left */
+     padding: 12px 16px;
+     /* top bot se 12 , left right 16*/
+ }
+
+ .box-p1 {
+     font-weight: 500;
+     font-size: 16 px;
+ }
+
+ .box-p2 {
+     font-size: .85rem;
+ }
+
+ .badge-b {
+     border: none;
+     border-radius: 100px;
+     font-weight: 700;
+     height: 2rem;
+     margin-top: 0.5rem;
+     padding: 0.25rem 1rem;
+ }
+
+ .badge-b:hover {
+     font-weight: 800;
+ }
+
+ .navbar {
+     height: 70px;
+     background-color: black;
+     display: flex;
+     align-items: center;
+     /* verti aligning*/
+     position: sticky;
+     top: 0;
+ }
+
+ .nav-left {
+     display: flex;
+     align-items: center;
+ }
+
+ .spot-img {
+     padding-left: 30px;
+     ;
+ }
+
+ .circle {
+     width: 42px;
+     height: 42px;
+     border-radius: 50%;
+     background-color: #1a1a1a;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     margin: 0 20px;
+ }
+
+ .circle i {
+     font-size: 25px;
+ }
+
+ .nav-center {
+     display: flex;
+     align-items: center;
+     background-color: #1a1a1a;
+     padding: 10px 15px;
+     border-radius: 30px;
+     width: 420px;
+     gap: 15px;
+     margin-left: 20px;
+ }
+
+ .nav-center input {
+     flex: 1;
+     /* flex =1 means it will take remaining space */
+     background-color: transparent;
+     border: none;
+     outline: none;
+     color: white;
+     font-size: 14px;
+ }
+
+ .nav-right a {
+     text-decoration: none;
+     color: #b3b3b3;
+     font-weight: 600;
+     padding-left: 20px;
+ }
+
+ .nav-right a:hover {
+     color: white;
+ }
+
+ .divider {
+     width: 1px;
+     height: 20px;
+     background-color: #b3b3b3;
+     display: inline-block;
+     margin-left: 20px;
+ }
+
+ .login-btn {
+     border: none;
+     padding: 10px 22px;
+     border-radius: 20px;
+     font-weight: bold;
+     cursor: pointer;
+     margin-left: 20px;
+ }
+
+ .login-btn:hover {
+     transform: scale(1.05);
+ }
+
+ .nav-right {
+     margin-left: 100px;
+     white-space: nowrap;
+ }
+
+ @media (max-width : 1000px) {
+     .hide {
+         display: none;
+     }
+ }
+
+.card:hover{
+    background-color: #4b4b4b;
+}
+
+ .card-container {
+     display: flex;
+     flex-wrap: wrap
+     /* flex wrap : wrap does the existing containers to go down if space not there  to downwards */
+ }
+
+ .card {
+     background-color: #232323;
+     width: 200px;
+     border-radius: 8px;
+     padding: 16px;
+     margin-left: 24px;
+     margin-top: 16px;
+      overflow-x: auto;
+ }
+
+ .card-img {
+     width: 100%;
+     border-radius: 8px;
+ }
+
+ .card-title {
+     font-weight: 600;
+ }
+
+ .card-info {
+     font-size: 14px;
+ }
+
+ .footer{
+    height: 300px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    opacity: 0.4;
+    width: 90%;
+    display: flex;
+ }
+
+ .column{
+    padding: 24px;
+ }
+
+ .column a{
+    display: block;
+    text-decoration: none;
+    color: white;
+ }
+
+ .music-playbutton{
+    color: rgb(20, 214, 20);
+    font-size:2.5rem ;
+    opacity: 0;
+ }
+
+ /* it means when you hover on card then pnly make changes*/
+ .card:hover .music-playbutton{
+    opacity: 1;
+ }
+
+ /* music player */
+ .player-bar{
+    height: 5rem;
+    width: 100%;
+    margin-top: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#1a1a1a;
+    position: fixed;
+    bottom: 0 ;
+ }
+
+ .music-controller{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .player{
+    display: flex;
+    margin-bottom: 0.5rem;
+    align-items: center;
+ }
+
+.player-btns{
+    font-size: 1.1rem ;
+    margin: 0.4rem 1rem;
+    color: rgb(223, 208, 208);
+    cursor: pointer;
+}
+
+.player-btns:hover{
+    transform :scale(1.02) ;
+    color: rgb(232 232 232);
+}
+
+#play{
+ font-size: 2.3rem;
+ color: white;
+}
+
+#progressbar{
+    width :600px ;
+    height: 3px;
+    background-color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    padding: 1px;
+    appearance: none;
+}
+
+input [type='range']::-webkit-slider-thumb{
+    appearance: none;
+    width: 10px;
+    height: 10px; 
+}
+
+.player-bar img{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10px;
+    padding: 0.3rem;
+}
+
+.now-bar{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.img-tt{
+    font-size: 0.9rem ;
+    margin-left: 1rem;
+}
+
+.img-des{
+    font-size: 0.8rem;
+    color: rgb(197, 190, 190);
+    margin-left: 1rem;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .nav-center {
+        width: 300px;
+    }
+
+    .nav-right {
+        margin-left: 20px;
+    }
+
+    #progressbar {
+        width: 400px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .main {
+        padding: 5px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .navbar {
+        height: 60px;
+    }
+
+    .spot-img {
+        padding-left: 10px;
+    }
+
+    .circle {
+        width: 35px;
+        height: 35px;
+        margin: 0 5px;
+    }
+
+    .circle i {
+        font-size: 20px;
+    }
+
+    .nav-center {
+        width: 180px;
+        margin-left: 5px;
+        padding: 8px 10px;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .card {
+        width: 150px;
+        margin-left: 10px;
+    }
+
+    .footer {
+        width: 95%;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .column {
+        padding: 15px;
+    }
+
+    .player-bar {
+        height: 5rem;
+    }
+
+    .player-bar img {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .img-tt,
+    .img-des {
+        display: none;
+    }
+
+    #progressbar {
+        width: 200px;
+    }
+
+    .player-btns {
+        margin: 0.4rem;
+    }
+}
+
+
+/* Small mobile */
+@media (max-width: 450px) {
+
+    .nav-center {
+        width: 130px;
+    }
+
+    .card {
+        width: 130px;
+        padding: 10px;
+        margin-left: 8px;
+    }
+
+    #progressbar {
+        width: 130px;
+    }
+
+    .player-btns {
+        margin: 0.2rem;
+        font-size: 1rem;
+    }
+
+    #play {
+        font-size: 1.8rem;
+    }
+}
+
+
+
