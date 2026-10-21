@@ -19,3 +19,4 @@ The project focuses on recreating the look and feel of Spotify while implementin
 
 ## Purpose
 This project was created to practice **frontend web development, responsive design, CSS layouts, and JavaScript DOM manipulation**.
+website link : spotify-clone-jsnsxn4b5-harsh-portfolio7.vercel.app
